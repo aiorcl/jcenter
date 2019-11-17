@@ -1,0 +1,10 @@
+*.iml
+*.idea
+*build
+*captures
+*local.properties
+.gradle
+.DS_Store
+*official
+*.7z
+*.log

@@ -11,7 +11,7 @@ publish {
     //项目名称
     artifactId = 'Googol'
     //版本号
-    publishVersion = '1.0.3'
+    publishVersion = '1.0.6'
     //项目介绍，可以不写
     desc = 'Android CI Library'
     //项目主页，可以不写

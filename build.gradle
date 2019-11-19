@@ -2,29 +2,30 @@
 
 buildscript {
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        // maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        // maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         mavenCentral()
         google()
         jcenter()
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
-        classpath 'com.novoda:bintray-release:0.9.1'
-        // classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        // classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        // classpath 'com.novoda:bintray-release:0.9.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        mavenCentral()
+        // maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        // maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        // mavenCentral()
         google()
         jcenter()
         maven {
@@ -41,8 +42,16 @@ allprojects {
             // url 'https://raw.githubusercontent.com/googol113/Stars/master'
         }
     }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//tasks.getByPath(":library:javadoc").enabled = false

@@ -23,13 +23,13 @@ buildscript {
 
 allprojects {
     repositories {
-        // maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        // maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        // mavenCentral()
         google()
         jcenter()
         maven {
-            // url "D:\\Projects\\Remote\\library\\maven"
+            //TODO Method[1] -> (Local Mode)
+            // url 'D:\\Projects\\Remote\\library\\maven'
+
+            //TODO Method[2] -> (Nexus Mode)
             // url 'http://localhost:8081/repository/maven-releases/'
             /*credentials {
                 username 'admin'

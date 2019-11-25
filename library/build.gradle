@@ -29,6 +29,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 
-// apply from: 'maven-release-aar.gradle'
+//TODO Method[1、2] -> (Local Or Nexus Mode)
+apply from: 'maven-release-aar.gradle'
 // apply from: 'jcenter-novoda-release-aar.gradle'
-apply from: 'jcenter-bintray-release-aar.gradle'
+// apply from: 'jcenter-bintray-release-aar.gradle'

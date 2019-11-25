@@ -1,24 +1,23 @@
-// 1.maven-插件
+// 1、Maven-插件.
 apply plugin: 'maven'
 
-// 2.maven-信息
-ext {// ext is a gradle closure allowing the declaration of global properties
+// 2、Maven-信息.
+ext {
     GROUP_ID = 'com.library'
     ARTIFACT_ID = 'Library'
     VERSION = android.defaultConfig.versionName
 }
 
-// 3.maven-输出路径
+// 3、Maven-输出路径.
 uploadArchives {
     repositories {
         mavenDeployer {
-            //这里就是最后输出地址，在自己电脑上新建个文件夹，把文件夹路径粘贴在此
-            //注意”file://“ + 路径，有三个斜杠，别漏了
-            //println(uri('./maven'))
+            //TODO Method[1] -> (Local Mode)
             // repository(url: uri('./maven'))
 
+            //TODO Method[2] -> (Nexus Mode)
             repository(url: "http://localhost:8081/repository/maven-releases/") {
-                //nexus登录默认用户名和密码
+                // Nexus登录默认用户名和密码.
                 authentication(userName: "admin", password: "googol")
             }
 
@@ -33,8 +32,7 @@ uploadArchives {
     }
 }
 
-//以下代码会生成jar包源文件，如果是不开源码，请不要输入这段
-//aar包内包含注释
+//TODO 生成JAR包源文件，如果不开源码请注释.
 task androidSourcesJar(type: Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.sourceFiles

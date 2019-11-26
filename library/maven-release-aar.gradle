@@ -17,7 +17,7 @@ uploadArchives {
 
             //TODO Method[2] -> (Nexus Mode)
             repository(url: "http://localhost:8081/repository/maven-releases/") {
-                // Nexus登录默认用户名和密码.
+                // Nexus Authentication.
                 authentication(userName: "admin", password: "googol")
             }
 

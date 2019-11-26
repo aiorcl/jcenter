@@ -31,10 +31,12 @@ allprojects {
 
             //TODO Method[2] -> (Nexus Mode)
             // url 'http://localhost:8081/repository/maven-releases/'
+            // Nexus Authentication.
             /*credentials {
                 username 'admin'
                 password 'googol'
             }*/
+
             url 'https://dl.bintray.com/googleservices/maven'
             // url 'https://github.com/googol113/Library/raw/master'
             // url 'https://raw.githubusercontent.com/googol113/Library/master'

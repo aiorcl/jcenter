@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+        // TODO Use -> AliYun Cloud.
         // maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         // maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
         mavenCentral()
@@ -40,9 +41,11 @@ allprojects {
                 password 'googol'
             }*/
 
+            //TODO Method[3、4] -> (JCenter Mode)
             url 'https://dl.bintray.com/googleservices/maven'
+
+            //TODO GitHub Dependencies
             // url 'https://github.com/googol113/Library/raw/master'
-            // url 'https://raw.githubusercontent.com/googol113/Library/master'
             // url 'https://raw.githubusercontent.com/googol113/Library/master'
             // url 'https://raw.githubusercontent.com/googol113/Stars/master'
         }
@@ -58,5 +61,3 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-//tasks.getByPath(":library:javadoc").enabled = false

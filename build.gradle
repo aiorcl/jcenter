@@ -16,11 +16,11 @@ buildscript {
         // in the individual module build.gradle files
 
         //TODO Method[3] -> (JCenter -> novoda)
-        classpath 'com.novoda:bintray-release:0.9.1'
+        // classpath 'com.novoda:bintray-release:0.9.1'
 
         //TODO Method[4] -> (JCenter -> bintray)
-        // classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        // classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
     }
 }
 

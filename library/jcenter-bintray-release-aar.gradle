@@ -64,8 +64,8 @@ apply plugin: 'com.jfrog.bintray'
     }
 }*/
 
-def SITE_URL = 'https://github.com/CoralXss/CommonBannerView'
-def GIT_URL = 'https://github.com/CoralXss/CommonBannerView.git'
+def SITE_URL = 'https://www.googleservices.cn'
+def REPO_URL = 'https://github.com/googol113/jcenter.git'
 
 group = 'cn.googleservices'
 version = android.defaultConfig.versionName
@@ -102,8 +102,8 @@ install {
 
                     scm {
                         url SITE_URL
-                        connection GIT_URL
-                        developerConnection GIT_URL
+                        connection REPO_URL
+                        developerConnection REPO_URL
                     }*/
                 }
             }
@@ -149,9 +149,9 @@ bintray {
             desc = 'Android CI Library'
         }
         licenses = ['Apache-2.0']
-        vcsUrl = GIT_URL
+        vcsUrl = REPO_URL
         publish = true
     }
 }
 
-// 上传到 jcenter : gradle bintrayUpload
+// gradlew clean build bintrayUpload

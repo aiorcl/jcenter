@@ -44,7 +44,7 @@ allprojects {
             //TODO Method[3、4] -> (JCenter Mode)
             url 'https://dl.bintray.com/googleservices/maven'
 
-            //TODO GitHub Dependencies
+            //TODO GitHub Dependencies -> (Source code and Maven in the same directory)
             // url 'https://github.com/googol113/Library/raw/master'
             // url 'https://raw.githubusercontent.com/googol113/Library/master'
             // url 'https://raw.githubusercontent.com/googol113/Stars/master'

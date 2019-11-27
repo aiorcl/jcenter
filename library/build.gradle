@@ -30,6 +30,10 @@ dependencies {
 }
 
 //TODO Method[1、2] -> (Local Or Nexus Mode)
-apply from: 'maven-release-aar.gradle'
-// apply from: 'jcenter-novoda-release-aar.gradle'
+// apply from: 'maven-release-aar.gradle'
+
+//TODO Method[3] -> (JCenter -> novoda)
+apply from: 'jcenter-novoda-release-aar.gradle'
+
+//TODO Method[4] -> (JCenter -> bintray)
 // apply from: 'jcenter-bintray-release-aar.gradle'

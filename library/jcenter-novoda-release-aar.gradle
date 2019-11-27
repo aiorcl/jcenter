@@ -2,19 +2,19 @@ apply plugin: 'com.novoda.bintray-release'
 
 //推送到Bintray配置
 publish {
-    //你的账户bintray下某个组织id
+    //你的账户bintray下某个组织ID
     userOrg = 'googleservices'
     //仓库名字
     repoName = "maven"
-    //Maven仓库下库的包名,一本与包名相同
+    //Maven仓库下库的包名,一般与包名相同
     groupId = 'cn.googleservices'
     //项目名称
     artifactId = 'Googol'
-    //版本号
-    publishVersion = '1.0.6'
-    //项目介绍，可以不写
+    //发布版本号
+    publishVersion = android.defaultConfig.versionName
+    //项目介绍，可以省略
     desc = 'Android CI Library'
-    //项目主页，可以不写
+    //项目主页，可以省略
     website = 'www.googleservices.cn'
 }
 // gradlew clean build bintrayUpload -PbintrayUser=smiletiger -PbintrayKey=643447416017853431825d9393ffad41d106b48d -PdryRun=false

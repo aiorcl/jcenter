@@ -1,5 +1,7 @@
 apply plugin: 'com.novoda.bintray-release'
 
+//TODO Guide -> https://github.com/novoda/bintray-release
+
 //推送到Bintray配置
 publish {
     //你的账户bintray下某个组织ID

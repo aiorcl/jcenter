@@ -1,7 +1,7 @@
 // 1、Maven-插件.
 apply plugin: 'maven'
 
-//TODO Guide -> https://www.sonatype.com/download-nexus-repo-oss
+//TODO Download -> https://www.sonatype.com/download-nexus-repo-oss
 
 // 2、Maven-信息.
 ext {
